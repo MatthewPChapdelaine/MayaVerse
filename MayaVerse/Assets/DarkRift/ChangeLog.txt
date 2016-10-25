@@ -140,3 +140,7 @@ V1.4.2
 
 	Documentation:
 	- Added NetworkMessage to Server reference.
+
+V1.4.3
+	Server:
+	- Fixed random dropout glitch

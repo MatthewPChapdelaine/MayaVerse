@@ -511,6 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   port: 4296
+  maxConnections: 20
   logData: 0
   callEventsFrom: 0
 --- !u!1 &2103890316
