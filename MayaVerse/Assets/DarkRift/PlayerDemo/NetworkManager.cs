@@ -69,7 +69,9 @@ public class NetworkManager : MonoBehaviour
 				//If it's our player being created allow control and set the reference
 				if (senderID == DarkRiftAPI.id)
 				{
-					clone.GetComponent<Player>().isControllable = true;
+					//clone.GetComponent<Player>().isControllable = true;
+					//ENG: So easy??
+					//ITA: Così facile: basta aggiungere Transfor Gizmo alla camera in scena e disabilitare il loro movimento?
 					player = clone.transform;
 				}
 			}
