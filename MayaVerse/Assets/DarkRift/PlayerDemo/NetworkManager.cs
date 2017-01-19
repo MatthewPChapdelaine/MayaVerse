@@ -18,6 +18,9 @@ public class NetworkManager : MonoBehaviour
 
 	void Start ()
 	{
+		//Enable Background Running
+		Application.runInBackground = true;
+
 		//Connect to the DarkRift Server using the Ip specified (will hang until connected or timeout)
 		DarkRiftAPI.Connect (serverIP);
 		//Setup a receiver so we can create players when told to.
@@ -65,6 +68,9 @@ public class NetworkManager : MonoBehaviour
 				GameObject clone = (GameObject)Instantiate (playerObject, (Vector3)data, Quaternion.identity);
 				//Tell the network player who owns it so it tunes into the right updates.
 				clone.GetComponent<NetworkPlayer>().networkID = senderID;
+
+				Debug.Log ("SenderID");
+				Debug.Log (senderID);
 
 				//If it's our player being created allow control and set the reference
 				if (senderID == DarkRiftAPI.id)
